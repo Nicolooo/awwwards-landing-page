@@ -4,6 +4,7 @@ import Rounded from '../../common/RoundedButton';
 import { useRef } from 'react';
 import { useScroll, motion, useTransform, useSpring } from 'framer-motion';
 import Magnetic from '../../common/Magnetic';
+import Link from 'next/link';
 
 export default function index() {
     const container = useRef(null);
@@ -23,7 +24,7 @@ export default function index() {
                             <Image 
                             fill={true}
                             alt={"image"}
-                            src={`/images/background.jpg`}
+                            src={`/images/pfp.jpg`}
                             />
                         </div>
                         <h2>Let's work</h2>
@@ -40,38 +41,35 @@ export default function index() {
                 </div>
                 <div className={styles.nav}>
                         <Rounded>
-                            <p>info@dennissnellenberg.com</p>
+                            <p>nicolosirbiladze@gmail.com</p>
                         </Rounded>
                         <Rounded>
-                            <p>+31 6 27 84 74 30</p>
+                            <p>+36 20 354 78 05 </p>
                         </Rounded>
                 </div>
                 <div className={styles.info}>
                     <div>
                         <span>
                             <h3>Version</h3>
-                            <p>2022 © Edition</p>
+                            <p>2024 © Edition</p>
                         </span>
                         <span>
                             <h3>Version</h3>
-                            <p>11:49 PM GMT+2</p>
+                            <p>1.0.0</p>
                         </span>
                     </div>
                     <div>
                         <span>
                             <h3>socials</h3>
-                            <Magnetic>
-                                <p>Awwwards</p>
-                            </Magnetic>
                         </span>
                         <Magnetic>
-                            <p>Instagram</p>
+                        <Link href={'https://www.instagram.com/nikushasirbiladze_/'}><p>Instagram</p></Link>
                         </Magnetic>
                         <Magnetic>
-                            <p>Dribbble</p>
+                            <p><Link href={'https://open.spotify.com/artist/764biWvvSyvt6d9mIU8ngk?si=oKnQEmN-QNKXqtnEPy2t8w'}>spotify</Link></p>
                         </Magnetic>
                         <Magnetic>
-                            <p>Linkedin</p>
+                        <p><Link href={'https://ge.linkedin.com/in/nikusha-sirbiladze-975788203'}>Linkdin</Link></p>
                         </Magnetic>
                     </div>
                 </div>

@@ -13,12 +13,12 @@
         width: 100%;
         height: calc(100% + 300px);
         path{
-            fill: #141516;
+            fill: #D1FA94;
         }
     }
     p{
         display: flex;
-        color: white;
+        color: black;
         font-size: 42px;
         align-items: center;
         position: absolute;
@@ -27,7 +27,7 @@
             display: block;
             width: 10px;
             height: 10px;
-            background-color: white;
+            background-color: black;
             border-radius: 50%;
             margin-right: 10px;
         }

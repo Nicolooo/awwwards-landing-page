@@ -1,4 +1,4 @@
-.slidingImages{
+.slidingImages {
     display: flex;
     flex-direction: column;
     gap: 3vw;
@@ -6,41 +6,126 @@
     margin-top: 200px;
     background-color: white;
     z-index: 1;
-    .slider{
+  
+    .slider {
+      display: flex;
+      position: relative;
+      gap: 3vw;
+      width: 120vw;
+      left: -10vw;
+  
+      .project {
+        width: 25%;
+        height: 20vw;
         display: flex;
-        position: relative;
-        gap: 3vw;
-        width: 120vw;
-        left: -10vw;
-        .project{
-            width: 25%;
-            height: 20vw;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            .imageContainer{
-                position: relative;
-                width: 80%;
-                height: 80%;
-                img{
-                    object-fit: cover;
-                }
-            }
+        align-items: center;
+        justify-content: center;
+  
+        .imageContainer {
+          position: relative;
+          width: 80%;
+          height: 80%;
+  
+          img {
+            object-fit: cover;
+          }
         }
+      }
     }
-    .circleContainer{
-        background-color: red;
-        position: relative;
-        margin-top: 100px;
-        .circle{
-            height: 1550%;
-            width: 120%;
-            left: -10%;
-            border-radius: 0 0 50% 50%;
-            background-color: white;
-            z-index: 1;
-            position: absolute;
-            box-shadow: 0px 60px 50px rgba(0, 0, 0, 0.748);
+  
+    .circleContainer {
+      background-color: red;
+      position: relative;
+      margin-top: 100px;
+  
+      .circle {
+        height: 1550%;
+        width: 120%;
+        left: -10%;
+        border-radius: 0 0 50% 50%;
+        background-color: white;
+        z-index: 1;
+        position: absolute;
+        box-shadow: 0px 60px 50px rgba(0, 0, 0, 0.748);
+      }
+    }
+  
+    // Responsive Styles
+    @media (max-width: 1024px) { // Tablet and larger mobile screens
+      margin-top: 150px;
+  
+      .slider {
+        width: 100vw;
+        left: 0;
+        gap: 2vw;
+      }
+  
+      .project {
+        width: 35%;
+        height: 25vw;
+      }
+  
+      .circleContainer {
+        margin-top: 80px;
+  
+        .circle {
+          height: 1000%;
+          width: 110%;
+          left: -5%;
         }
+      }
     }
-}
+  
+    @media (max-width: 768px) {
+    display: none; // Tablets and smaller screens
+      margin-top: 100px;
+  
+      .slider {
+        width: 100vw;
+        left: 0;
+        gap: 1.5vw;
+      }
+  
+      .project {
+        width: 45%;
+        height: 30vw;
+      }
+  
+      .circleContainer {
+        margin-top: 60px;
+  
+        .circle {
+          height: 700%;
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+  
+    @media (max-width: 480px) { // Phones
+        display: none;
+      margin-top: 50px;
+        
+      .slider {
+        width: 100vw;
+        left: 0;
+        gap: 1vw;
+      }
+  
+      .project {
+        width: 70%;
+        height: 40vw;
+      }
+  
+      .circleContainer {
+        margin-top: 30px;
+  
+        .circle {
+          height: 500%;
+          width: 90%;
+          left: 0;
+        }
+      }
+    }
+  }
+  

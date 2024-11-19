@@ -1,38 +1,78 @@
-.project{
+.project {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 100px 50px 100px;
+    padding: 50px 100px; // Default padding for larger screens
     border-top: 1px solid rgb(201, 201, 201);
     cursor: pointer;
     transition: all 0.2s;
-
-    h2{
-        font-size: 60px;
-        margin: 0px;
-        font-weight: 400;
-        transition: all 0.4s;
+  
+    h2 {
+      font-size: 60px; // Default font size for larger screens
+      margin: 0;
+      font-weight: 400;
+      transition: all 0.4s;
     }
-
-    p{
-        transition: all 0.4s;
-        font-weight: 300;
+  
+    p {
+      transition: all 0.4s;
+      font-weight: 300;
     }
-
-    &:last-of-type{
-        border-bottom: 1px solid rgb(201, 201, 201);
+  
+    &:last-of-type {
+      border-bottom: 1px solid rgb(201, 201, 201);
     }
-
-    &:hover{
-        opacity: 0.5;
-
-        h2{
-            transform: translateX(-10px);
-        }
-
-        p{
-            transform: translateX(10px);
-        }
+  
+    &:hover {
+      opacity: 0.5;
+  
+      h2 {
+        transform: translateX(-10px);
+      }
+  
+      p {
+        transform: translateX(10px);
+      }
     }
-}
+  
+    // Responsive Design
+    @media (max-width: 1024px) { // Tablet and medium screens
+      padding: 30px 50px; // Adjust padding for tablet and medium screens
+  
+      h2 {
+        font-size: 45px; // Adjust font size for better readability on smaller screens
+      }
+  
+      p {
+        font-size: 16px; // Ensure the paragraph text doesn't overwhelm the screen
+      }
+    }
+  
+    @media (max-width: 768px) { // Small tablet and large mobile screens
+      flex-direction: column; // Stack the content vertically on smaller screens
+      padding: 20px 30px; // Further reduce padding for small screens
+  
+      h2 {
+        font-size: 36px; // Smaller font size for smaller screens
+      }
+  
+      p {
+        font-size: 14px; // Adjust paragraph font size for readability
+        margin-top: 10px; // Add a small margin to separate the heading and paragraph
+      }
+    }
+  
+    @media (max-width: 480px) { // Mobile screens
+      padding: 15px 20px; // Further reduced padding for mobile devices
+  
+      h2 {
+        font-size: 28px; // Even smaller font size for very small screens
+      }
+  
+      p {
+        font-size: 12px; // Small font size for mobile screens
+      }
+    }
+  }
+  
